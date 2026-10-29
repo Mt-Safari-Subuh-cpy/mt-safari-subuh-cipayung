@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website Resmi Majelis Taklim Safari Subuh Kecamatan Cipayung. Jadwal sholat akurat, informasi kegiatan majelis, laporan keuangan kas transparan, dan live streaming kajian rutin." />
+<meta name="keywords" content="Majelis Taklim, Safari Subuh, Cipayung, Jakarta Timur, Jadwal Sholat Cipayung, Kajian Islam, Hadist Riyadhussholihin" />
+<meta name="author" content="Majelis Taklim Safari Subuh Cipayung" />
+
+<!-- Open Graph / Media Sosial & WhatsApp Preview -->
+<meta property="og:title" content="Majelis Taklim Safari Subuh Kecamatan Cipayung" />
+<meta property="og:description" content="Informasi kegiatan, jadwal sholat, laporan kas transparan, dan link live streaming kajian." />
+<meta property="og:image" content="https://lh3.googleusercontent.com/d/1ZDe0mnH3wIRzYZY5JkLhUwWYed5MEKfM" />
+<meta property="og:type" content="website" />
+  <title>Majelis Taklim Safari Subuh Kecamatan Cipayung</title>
+  
+  <!-- CSS Dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- JS Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <style>
+    :root { 
+      --dark-green: #033623; 
+      --medium-green: #045237; 
+      --accent-green: #23BD77; 
+    }
+    body { 
+      background: url("https://lh3.googleusercontent.com/d/10ki1BjZBv00jhpGK7BnpXNfjd4MV6_aO") no-repeat center center fixed; 
+      background-size: cover; 
+      font-family: "Segoe UI", Arial, sans-serif; 
+      color: #333; 
+      padding-bottom: 80px; 
+    }
+    .top-header { background-color: var(--dark-green); color: white; padding: 8px 20px; font-size: 0.85rem; border-bottom: 2px solid var(--accent-green); }
+    .brand-logo { height: 38px; width: auto; object-fit: contain; }
+    .sholat-widget { background-color: rgba(3, 54, 35, 0.95); color: white; border-radius: 10px; padding: 15px 25px; margin-top: 15px; backdrop-filter: blur(4px); }
+    .sholat-time-box { text-align: center; }
+    .sholat-time-box .label { font-size: 0.7rem; text-transform: uppercase; opacity: 0.8; letter-spacing: 0.5px; }
+    .sholat-time-box .time { font-weight: 800; font-size: 1.1rem; color: #FFDF00; }
+    .profile-card { background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 12px; border: 1px solid #DCE3DE; box-shadow: 0 4px 10px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 12px; height: 100%; }
+    .profile-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-green); background-color: #EEE; flex-shrink: 0; }
+    .profile-badge { font-size: 0.65rem; font-weight: 700; color: var(--dark-green); text-transform: uppercase; }
+    .section-header-pill { background-color: var(--accent-green); color: white; font-weight: 700; font-size: 0.8rem; padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 12px; }
+    .content-box { background: rgba(255, 255, 255, 0.95); border-radius: 10px; padding: 18px; border: 1px solid #E2E8F0; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .info-card { background: #F8FAFC; border-left: 4px solid var(--dark-green); border-radius: 6px; padding: 12px 15px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+    .support-box { background-color: #F0FDF4; border-left: 4px solid var(--accent-green); border-radius: 6px; padding: 12px 15px; margin-top: 10px; }
+    .support-box ul { margin-bottom: 0; padding-left: 20px; }
+    .support-box li { font-size: 0.82rem; color: #166534; margin-bottom: 4px; }
+    .donation-banner { background: linear-gradient(135deg, var(--dark-green), var(--medium-green)); color: #FFDF00; border-radius: 10px; padding: 15px; text-align: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; border: 1px solid var(--accent-green); }
+    .btn-green-full { background-color: var(--dark-green); color: white; font-weight: 700; width: 100%; padding: 10px; border-radius: 8px; border: none; text-align: center; text-decoration: none; display: block; }
+    .btn-green-full:hover { background-color: var(--medium-green); color: white; }
+    .summary-card { background: rgba(255, 255, 255, 0.95); border-radius: 8px; padding: 12px; border: 1px solid #E2E8F0; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .summary-card .title { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 5px; }
+    .table-section-header { background-color: var(--dark-green); color: white; padding: 8px 15px; border-radius: 6px 6px 0 0; font-weight: 700; font-size: 0.85rem; display: flex; justify-content: space-between; }
+    .bank-card { background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 8px; padding: 15px; }
+    .style-caption { background: rgba(3, 54, 35, 0.75); border-radius: 4px; bottom: 8px !important; left: 10% !important; right: 10% !important; }
+    .chart-wrapper { position: relative; height: 180px; width: 100%; }
+    .bottom-ticker-bar { position: fixed; bottom: 0; left: 0; width: 100%; background-color: var(--dark-green); color: #FFDF00; border-top: 2px solid var(--accent-green); z-index: 9999; display: flex; align-items: center; box-shadow: 0 -4px 10px rgba(0,0,0,0.2); }
+    .ticker-label { background-color: var(--accent-green); color: white; font-weight: 800; font-size: 0.75rem; padding: 8px 15px; white-space: nowrap; text-transform: uppercase; }
+    .ticker-content { overflow: hidden; white-space: nowrap; width: 100%; }
+    .ticker-text { display: inline-block; padding-left: 100%; animation: marquee 180s linear infinite; font-weight: 600; font-size: 0.85rem; }
+    .ticker-content:hover .ticker-text { animation-play-state: paused; }
+    @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+    .animate-pulse { animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+
+    /* PRAYER REMINDER FEATURE STYLES */
+    .prayer-reminder-card {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin-top: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .prayer-reminder-status-dot {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .prayer-reminder-status-dot.active { background-color: #23BD77; box-shadow: 0 0 6px #23BD77; }
+    .prayer-reminder-status-dot.inactive { background-color: #DC3545; }
+    .prayer-reminder-alert {
+      background-color: #FFDF00;
+      color: #033623;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      animation: prayerReminderPulse 1s infinite alternate;
+    }
+    @keyframes prayerReminderPulse {
+      from { transform: scale(1); opacity: 0.9; }
+      to { transform: scale(1.02); opacity: 1; }
+    }
+
+    /* BANNER DONASI SAHABAT YATIM & PIATU */
+    .donation-yatim-banner {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #39e75f 0%, #20c957 45%, #0f9f45 100%);
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 2px solid #8cff9f;
+      box-shadow: 0 8px 22px rgba(0, 80, 35, 0.25);
+    }
+    .donation-yatim-banner::before,
+    .donation-yatim-banner::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.16);
+      pointer-events: none;
+    }
+    .donation-yatim-banner::before { width: 140px; height: 140px; right: -55px; top: -65px; }
+    .donation-yatim-banner::after { width: 100px; height: 100px; left: -45px; bottom: -55px; }
+    .donation-kids {
+      display: inline-block;
+      font-size: 3.3rem;
+      animation: donationKidsFloat 2s ease-in-out infinite;
+      filter: drop-shadow(0 4px 3px rgba(0,0,0,0.15));
+    }
+    @keyframes donationKidsFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .donation-yatim-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      background: #033623;
+      color: #ffffff !important;
+      border: 2px solid #ffffff;
+      border-radius: 14px;
+      padding: 14px 22px;
+      font-size: 1rem;
+      font-weight: 900;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 6px 0 #022719;
+      animation: donationButtonPulse 2s ease-in-out infinite;
+      transition: all 0.2s ease;
+    }
+    .donation-yatim-button:hover {
+      background: #045237;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 0 #022719;
+    }
+    .donation-yatim-button:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #022719;
+    }
+    @keyframes donationButtonPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 6px 0 #022719, 0 0 0 rgba(255,255,255,0); }
+      50% { transform: scale(1.025); box-shadow: 0 7px 0 #022719, 0 0 18px rgba(255,255,255,0.65); }
+    }
+    .donation-heart { display: inline-block; animation: donationHeartBeat 1.1s ease-in-out infinite; }
+    @keyframes donationHeartBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+    @media (max-width: 576px) {
+      .donation-yatim-banner { padding: 16px; border-radius: 15px; }
+      .donation-kids { font-size: 2.8rem; }
+      .donation-yatim-button { font-size: 0.85rem; line-height: 1.35; padding: 13px 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .donation-kids, .donation-yatim-button, .donation-heart { animation: none !important; }
+    }
+
+    /* SPONSOR BERBAYAR */
+    .sponsor-section { background:rgba(255,255,255,0.96); border:1px solid #DCE3DE; border-radius:12px; padding:14px; margin-bottom:20px; box-shadow:0 5px 14px rgba(0,0,0,0.07); }
+    .sponsor-section-label { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; font-size:.72rem; font-weight:800; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+    .sponsor-ad-card { position:relative; overflow:hidden; border-radius:14px; border:1px solid #d9e2dc; background:#fff; color:#17352a; box-shadow:0 4px 14px rgba(0,0,0,.08); }
+    .sponsor-ad-link { display:block; color:inherit !important; text-decoration:none !important; }
+    .sponsor-ad-banner-wrap { position:relative; width:100%; background:#eef2f0; overflow:hidden; }
+    .sponsor-ad-image { display:block; width:100%; height:auto; min-height:140px; max-height:360px; object-fit:cover; background:#eef2f0; }
+    .sponsor-ad-banner-fallback { display:flex; align-items:center; justify-content:center; min-height:150px; padding:24px; background:linear-gradient(135deg,#033623,#08744d); color:#fff; text-align:center; }
+    .sponsor-ad-banner-fallback i { font-size:2rem; margin-bottom:8px; display:block; }
+    .sponsor-ad-body { padding:12px 15px 14px; }
+    .sponsor-ad-name { font-size:.68rem; font-weight:800; text-transform:uppercase; color:#08744d; letter-spacing:.4px; margin-bottom:3px; }
+    .sponsor-ad-title { font-size:1rem; font-weight:800; margin-bottom:4px; color:#17352a; }
+    .sponsor-ad-description { font-size:.78rem; line-height:1.45; color:#52635c; }
+    .sponsor-ad-cta { display:inline-block; margin-top:9px; padding:7px 12px; border-radius:999px; background:#FFDF00; color:#033623 !important; font-size:.7rem; font-weight:900; }
+    .sponsor-ad-card:hover { transform:translateY(-1px); box-shadow:0 7px 18px rgba(0,0,0,.11); transition:.18s ease; }
+    .sponsor-admin-table td { vertical-align:middle; font-size:.72rem; }
+    .sponsor-admin-table th { font-size:.68rem; white-space:nowrap; }
+    @media (max-width:576px) { .sponsor-ad-title{font-size:.9rem;} .sponsor-ad-description{font-size:.74rem;} }
+</style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <div class="top-header d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2">
+      <img src="https://lh3.googleusercontent.com/d/1ZDe0mnH3wIRzYZY5JkLhUwWYed5MEKfM" class="brand-logo" alt="Logo Safari Subuh">
+      <span class="fw-bold fs-6">Majelis Taklim Safari Subuh Kecamatan Cipayung</span>
+    </div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-sm btn-outline-light py-0 px-2" style="font-size:0.75rem;" onclick="openLoginModal()">Dashboard Admin</button>
+    </div>
+  </div>
+
+  <div class="container" style="max-width: 1100px;">
+    
+    <!-- Widget Waktu & Sholat -->
+    <div class="sholat-widget shadow-sm">
+      <div class="d-flex justify-content-between align-items-center mb-2 border-bottom border-secondary pb-2">
+        <div class="fw-bold text-uppercase" style="letter-spacing: 1px; font-size: 0.85rem;">INFORMASI DAN LAPORAN MAJELIS TAKLIM SAFARI SUBUH KECAMATAN CIPAYUNG</div>
+        <div class="text-end" style="line-height: 1.2;">
+          <div class="fw-bold text-warning" style="font-size: 0.9rem;" id="clockDisplay">00:00:00 WIB</div>
+          <div class="small text-white-50" style="font-size: 0.72rem;" id="dateDisplay">--</div>
+        </div>
+      </div>
+      
+      <div class="row g-2 text-center pt-1">
+        <div class="col"><div class="sholat-time-box"><div class="label">SUBUH</div><div class="time" id="subuh-time">04:36</div></div></div>
+        <div class="col"><div class="sholat-time-box"><div class="label">DZUHUR</div><div class="time" id="dzuhur-time">11:54</div></div></div>
+        <div class="col"><div class="sholat-time-box"><div class="label">ASHAR</div><div class="time" id="ashar-time">15:13</div></div></div>
+        <div class="col"><div class="sholat-time-box"><div class="label">MAGHRIB</div><div class="time" id="maghrib-time">17:55</div></div></div>
+        <div class="col"><div class="sholat-time-box"><div class="label">ISYA</div><div class="time" id="isya-time">19:02</div></div></div>
+      </div>
+
+      <!-- Pengingat Sholat Otomatis -->
+      <div class="prayer-reminder-card mt-3">
+        <div class="row align-items-center g-2">
+          <!-- Status & Countdown -->
+          <div class="col-md-5">
+            <div class="d-flex align-items-center mb-1">
+              <span id="prStatusDot" class="prayer-reminder-status-dot inactive"></span>
+              <strong id="prStatusText" style="font-size: 0.8rem;" class="text-light">Pengingat Nonaktif</strong>
+            </div>
+            <div id="prCountdownBox" style="font-size: 0.78rem;" class="text-warning fw-semibold">
+              Sholat berikutnya: <span id="prNextName">-</span> (<span id="prNextTime">--:--</span>) <span id="prCountdown">--:--:--</span> lagi
+            </div>
+            <div id="prAlertBanner" class="prayer-reminder-alert mt-1 d-none">
+              <i class="fas fa-volume-up me-1"></i> <span id="prAlertText">WAKTU SHOLAT TELAH TIBA</span>
+            </div>
+          </div>
+          <!-- Pilihan Suara & Control -->
+          <div class="col-md-7 text-md-end">
+            <div class="d-flex flex-wrap justify-content-md-end align-items-center gap-2">
+              <select id="prSoundType" class="form-select form-select-sm w-auto" style="font-size: 0.75rem;" onchange="PrayerReminder.changeSoundType(this.value)">
+                <option value="adzan">Suara: Adzan</option>
+                <option value="bedug">Suara: Bedug</option>
+                <option value="kentongan">Suara: Kentongan</option>
+              </select>
+              <button id="prBtnTest" class="btn btn-sm btn-outline-warning" style="font-size: 0.75rem;" onclick="PrayerReminder.testSound()">
+                <i class="fas fa-volume-high me-1"></i> Test Suara
+              </button>
+              <button id="prBtnToggle" class="btn btn-sm btn-success fw-bold" style="font-size: 0.75rem;" onclick="PrayerReminder.toggleActivation()">
+                <i class="fas fa-power-off me-1"></i> Aktifkan Pengingat Sholat
+              </button>
+            </div>
+            <div class="mt-1 text-white-50" style="font-size: 0.68rem;">
+              Lokasi: <span id="prLocationText">Mencari...</span> | Sumber: <span id="prSourceText">NU Online</span> | Update: <span id="prLastUpdate">--:--</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel Admin -->
+    <div id="adminPanel" class="card border-danger mt-3 shadow-sm" style="display: none;">
+      <div class="card-header bg-danger text-white d-flex justify-content-between align-items-center">
+        <span class="fw-bold"><i class="fas fa-user-shield me-2"></i> PANEL AKSES ADMIN</span>
+        <button class="btn btn-sm btn-light fw-bold text-danger" onclick="logoutAdmin()">Keluar Admin</button>
+      </div>
+      <div class="card-body bg-light">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <h6 class="fw-bold"><i class="fas fa-plus-circle text-success me-1"></i> Input Transaksi Kas</h6>
+            <form id="addTxForm" onsubmit="handleTxSubmit(event)">
+              <div class="row g-2">
+                <div class="col-6"><input type="date" id="txDate" class="form-control form-control-sm" required></div>
+                <div class="col-6">
+                  <select id="txType" class="form-select form-select-sm" required>
+                    <option value="MASUK">MASUK</option>
+                    <option value="KELUAR">KELUAR</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <select id="txCategory" class="form-select form-select-sm" required>
+                    <option value="Operasional">Operasional</option>
+                    <option value="Pembangunan">Pembangunan</option>
+                    <option value="Yatim-Duafa">Yatim-Duafa</option>
+                  </select>
+                </div>
+                <div class="col-6"><input type="number" id="txAmount" class="form-control form-control-sm" placeholder="Jumlah (Rp)" required></div>
+                <div class="col-12"><input type="text" id="txDesc" class="form-control form-control-sm" placeholder="Keterangan" required></div>
+                <div class="col-12"><button type="submit" class="btn btn-success btn-sm w-100 fw-bold">Simpan Transaksi</button></div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4 border-start">
+            <h6 class="fw-bold"><i class="fas fa-bullhorn text-warning me-1"></i> Post Informasi / Berita Baru</h6>
+            <form id="addInfoForm" onsubmit="handleInfoSubmit(event)">
+              <div class="mb-2"><input type="text" id="infoTitle" class="form-control form-control-sm" placeholder="Judul Informasi" required></div>
+              <div class="mb-2"><textarea id="infoContent" class="form-control form-control-sm" rows="3" placeholder="Isi Informasi / Pengumuman" required></textarea></div>
+              <button type="submit" class="btn btn-warning btn-sm w-100 fw-bold text-dark">Posting Informasi</button>
+            </form>
+          </div>
+          <div class="col-md-4 border-start">
+            <h6 class="fw-bold"><i class="fas fa-edit text-primary me-1"></i> Update Running Text</h6>
+            <div class="input-group mb-2">
+              <input type="text" id="newRunningText" class="form-control form-control-sm" placeholder="Teks Running Bar">
+              <button class="btn btn-primary btn-sm fw-bold" onclick="saveRunningText()">Update</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3 pt-3 border-top">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h6 class="fw-bold mb-0"><i class="fas fa-bullhorn text-success me-1"></i> Kelola Sponsor / Iklan Berbayar</h6>
+            <span class="badge bg-success">Tampil Otomatis Sesuai Tanggal</span>
+          </div>
+          <form id="sponsorForm" onsubmit="handleSponsorSubmit(event)">
+            <input type="hidden" id="sponsorId">
+            <div class="row g-2">
+              <div class="col-md-4"><input type="text" id="sponsorName" class="form-control form-control-sm" placeholder="Nama Sponsor" required></div>
+              <div class="col-md-4"><input type="text" id="sponsorTitle" class="form-control form-control-sm" placeholder="Judul Iklan" required></div>
+              <div class="col-md-4"><input type="url" id="sponsorLink" class="form-control form-control-sm" placeholder="Link Sponsor (https://...)" required></div>
+              <div class="col-md-5"><input type="url" id="sponsorBanner" class="form-control form-control-sm" placeholder="URL Banner/Gambar (opsional)"></div>
+              <div class="col-md-7"><input type="text" id="sponsorDescription" class="form-control form-control-sm" placeholder="Deskripsi singkat / penawaran"></div>
+              <div class="col-md-3"><label class="form-label small mb-1">Mulai Tayang</label><input type="date" id="sponsorStart" class="form-control form-control-sm" required></div>
+              <div class="col-md-3"><label class="form-label small mb-1">Berakhir</label><input type="date" id="sponsorEnd" class="form-control form-control-sm" required></div>
+              <div class="col-md-2"><label class="form-label small mb-1">Status</label><select id="sponsorStatus" class="form-select form-select-sm"><option value="Aktif">Aktif</option><option value="Nonaktif">Nonaktif</option></select></div>
+              <div class="col-md-4 d-flex align-items-end gap-2"><button type="submit" class="btn btn-success btn-sm fw-bold flex-grow-1"><i class="fas fa-save me-1"></i><span id="sponsorSubmitText">Simpan Sponsor</span></button><button type="button" class="btn btn-secondary btn-sm fw-bold" onclick="resetSponsorForm()">Reset</button></div>
+            </div>
+          </form>
+          <div class="small text-muted mt-2">Contoh: sponsor membayar Rp 500.000 untuk tayang 30 hari. Setelah tanggal berakhir, iklan otomatis tidak tampil lagi.</div>
+          <div class="table-responsive mt-3"><table class="table table-sm table-hover sponsor-admin-table mb-0"><thead class="table-light"><tr><th>Sponsor</th><th>Periode</th><th>Status</th><th class="text-center">Aksi</th></tr></thead><tbody id="sponsorAdminBody"><tr><td colspan="4" class="text-center text-muted">Belum ada data sponsor.</td></tr></tbody></table></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Profil Pengurus -->
+    <div class="row g-2 my-3">
+      <!-- 1. Guru / Penceramah Utama -->
+      <div class="col-12 col-md-4">
+        <div class="profile-card">
+          <img src="https://lh3.googleusercontent.com/d/1zM3f1PCO34lkgtUXW9h760-SjnuZjJlZ" class="profile-img" alt="Guru" onerror="this.src='https://via.placeholder.com/150/045237/FFFFFF?text=Guru'">
+          <div>
+            <div class="profile-badge">Guru / Penceramah</div>
+            <h6 class="fw-bold mb-0 text-dark" style="font-size:0.85rem;">Abuya Ust Al Habib Abdurrahman Bin Ahmad Assegaf Lc,.MA</h6>
+            <small class="text-muted" style="font-size:0.7rem;">Kitab: RiyadhusSholihin</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Guru / Penceramah -->
+      <div class="col-6 col-md-4">
+        <div class="profile-card">
+          <img src="https://lh3.googleusercontent.com/d/1lUKPt2fRHBrmdcUphwlJ6MTZJis0Zl8O" class="profile-img" alt="Guru">
+          <div>
+            <div class="profile-badge">Guru / Penceramah</div>
+            <h6 class="fw-bold mb-0 text-dark" style="font-size:0.85rem;">KH Lukman Hakim Hamid S.Pdi</h6>
+            <small class="text-muted" style="font-size:0.7rem;">Kitab: RiyadhusSholihin</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Umaro Kecamatan Cipayung -->
+      <div class="col-6 col-md-4">
+        <div class="profile-card">
+          <img src="https://lh3.googleusercontent.com/d/1rB1VHtjGNl5IR1NIUaJXs4nSORPVSGLH" class="profile-img" alt="Umaro Kecamatan Cipayung">
+          <div>
+            <div class="profile-badge">Umaro Kecamatan Cipayung</div>
+            <h6 class="fw-bold mb-0 text-dark" style="font-size:0.85rem;">Bp Diman, S.Kom., M.Si</h6>
+            <small class="text-muted" style="font-size:0.7rem;">Camat Kecamatan Cipayung</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Ketua Pimpinan -->
+      <div class="col-6 col-md-6">
+        <div class="profile-card">
+          <img src="https://lh3.googleusercontent.com/d/1CBgcy1xN5EIBFfQXykEW28pCgZ3N59VZ" class="profile-img" alt="Ketua" onerror="this.src='https://via.placeholder.com/150/23BD77/FFFFFF?text=Ketua'">
+          <div>
+            <div class="profile-badge">Ketua Pimpinan</div>
+            <h6 class="fw-bold mb-0 text-dark" style="font-size:0.85rem;">Drs H Agus Sudana</h6>
+            <small class="text-muted" style="font-size:0.7rem;">Ketua Majlis Taklim Safari Subuh</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Khodimul Majlis -->
+      <div class="col-6 col-md-6">
+        <div class="profile-card">
+          <img src="https://lh3.googleusercontent.com/d/185kBVVORVqpIQaS2XrBZ61eNptIj92bC" class="profile-img" alt="Khodim" onerror="this.src='https://via.placeholder.com/150/033623/FFFFFF?text=Khodim'">
+          <div>
+            <div class="profile-badge">Khodimul Majlis</div>
+            <h6 class="fw-bold mb-0 text-dark" style="font-size:0.85rem;">Ust Sumardi S,ag</h6>
+            <small class="text-muted" style="font-size:0.7rem;">Pembawa Acara Majlis Taklim Safari Subuh</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Informasi & Pengumuman -->
+    <div class="content-box">
+      <div class="section-header-pill"><i class="fas fa-newspaper me-1"></i> Informasi & Pengumuman Terbaru</div>
+      <div id="infoContainer"><div class="text-center text-muted py-3">Memuat Informasi...</div></div>
+    </div>
+
+    <!-- Banner Donasi & Tombol Aksi -->
+    <div class="donation-banner">
+      <i class="fas fa-hand-holding-heart me-2"></i> Untuk Mendukung Perbaikan dan Perapihan serta Peningkatan Kualitas baik Live Streaming Majlis? atau lainnya. Salurkan aspirasi Anda melalui Kotak Saran WhatsApp resmi kami. Setiap masukan dari Jama'ah sangat berharga bagi Evaluasi dan kemajuan dalam Pelayanan Majlis Taklim Safari Subuh Kecamatan Cipayung, Kami sangat mengharapkan Support dan Dukungan dari Jama'ah sekalian, Donasi dapat diberikan dengan mengisi Kotak Amal, Transfer dan QRIS.
+    </div>
+    
+    <div class="row g-2 mb-4">
+      <div class="col-md-6">
+        <a href="https://wa.me/6281283530848?text=%5BFORMULIR%20SARAN%20%26%20MASUKAN%5D%0AMajlis%20Taklim%20Safari%20Subuh%20Kec.%20Cipayung%0A%0AAssalamu%27alaikum%20Warahmatullahi%20Wabarakatuh.%0A%0AYth.%20Pengurus%20%2F%20Admin%20Majlis%2C%0ASaya%20ingin%20menyampaikan%20saran%20%26%20masukan%20demi%20perbaikan%20dan%20kemajuan%20pelayanan%20dakwah%20kita%20bersama.%0A%0A*Data%20Pengirim%3A*%0A%F0%9F%93%9D%20*Nama%20Lengkap%3A*%20%0A%F0%9F%95%8C%20*Asal%20Masjid%2FDKM%3A*%20%0A%F0%9F%93%8D%20*Kelurahan%3A*%20%0A%0A*Detail%20Saran%20%2F%20Masukan%3A*%0A%E2%9C%8D%EF%B8%8F%20%0A%0ATerima%20kasih%20atas%20perhatian%20dan%20kerja%20samanya.%0AJazakumullah%20Khairan%20Katsiran." target="_blank" class="btn-green-full shadow-sm" style="background-color: #25D366;"><i class="fab fa-whatsapp me-2" style="font-size: 1.1rem;"></i> Kirim Saran via WhatsApp</a>
+      </div>
+      <div class="col-md-6">
+        <a href="https://www.youtube.com/@Mtsafarisubuhcipayung/live" target="_blank" class="btn-green-full shadow-sm" style="background-color: #FF0000;"><i class="fab fa-youtube me-2" style="font-size: 1.1rem;"></i> Nonton Live Streaming YouTube</a>
+      </div>
+    </div>
+
+    <!-- SLOT SPONSOR BERBAYAR -->
+    <div id="sponsorContainer" class="sponsor-section" style="display:none;"></div>
+
+    <!-- Filter Transaksi -->
+    <div class="content-box">
+      <div class="section-header-pill"><i class="fas fa-filter me-1"></i> Pilih Laporan Yang Ingin Anda Lihat</div>
+      <div class="row align-items-center g-2">
+        <div class="col-md-8">
+          <select id="filterTypeSelect" class="form-select form-select-sm fw-semibold">
+            <option value="Pekan Berjalan" selected>Pekan Berjalan</option>
+            <option value="Bulan Berjalan">Bulan Berjalan</option>
+            <option value="Tahun Berjalan">Tahun Berjalan</option>
+            <option value="Semua">Semua Transaksi</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-success btn-sm w-100 fw-bold" onclick="applyFilter()"><i class="fas fa-sync-alt me-1"></i> Terapkan Filter</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ringkasan Kas Card -->
+    <div class="row g-2 mb-4">
+      <div class="col-md-4">
+        <div class="summary-card">
+          <div class="title text-success"><i class="fas fa-arrow-down me-1"></i> Total Masuk Tercatat</div>
+          <div class="row text-center pt-2 border-top">
+            <div class="col-6"><small class="text-muted d-block" style="font-size:0.65rem;">Operasional</small><strong id="incOp" style="font-size:0.8rem;">Rp 0</strong></div>
+            <div class="col-6"><small class="text-muted d-block" style="font-size:0.65rem;">Pembangunan</small><strong id="incPem" style="font-size:0.8rem;">Rp 0</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="summary-card">
+          <div class="title text-danger"><i class="fas fa-arrow-up me-1"></i> Total Keluar Tercatat</div>
+          <div class="row text-center pt-2 border-top">
+            <div class="col-6"><small class="text-muted d-block" style="font-size:0.65rem;">Operasional</small><strong id="expOp" style="font-size:0.8rem;">Rp 0</strong></div>
+            <div class="col-6"><small class="text-muted d-block" style="font-size:0.65rem;">Pembangunan</small><strong id="expPem" style="font-size:0.8rem;">Rp 0</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="summary-card">
+          <div class="title text-primary"><i class="fas fa-wallet me-1"></i> Saldo Kas Tercatat</div>
+          <div class="row text-center pt-2 border-top">
+            <div class="col-6"><small class="text-muted d-block" style="font-size:0.65rem;">Operasional</small><strong id="balOp" style="font-size:0.8rem;">Rp 0</strong></div>
+            <div class="col-6"><small class="text-muted d-block" style="font-size:0.65rem;">Pembangunan</small><strong id="balPem" style="font-size:0.8rem;">Rp 0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Streaming Section -->
+    <div class="row my-4">
+      <div class="col-12">
+        <div class="card shadow-sm border-0 overflow-hidden">
+          <div class="card-header bg-danger text-white d-flex align-items-center justify-content-between py-2">
+            <span class="fw-bold" style="font-size: 0.9rem;">
+              <i class="fab fa-youtube me-2"></i> Live Streaming Majlis Taklim
+            </span>
+            <span id="liveStatusBadge" class="badge bg-light text-danger fw-bold text-uppercase" style="font-size: 0.7rem;">
+              <i class="fas fa-circle me-1 text-danger animate-pulse"></i> Live / Replay Otomatis
+            </span>
+          </div>
+          <div class="card-body p-3 bg-light">
+            <div class="row align-items-center g-3">
+              <!-- Player Video (Kiri) -->
+              <div class="col-lg-8">
+                <div class="ratio ratio-16x9 shadow rounded overflow-hidden bg-dark">
+                  <iframe 
+                    id="mainLivePlayer"
+                    src="https://www.youtube.com/embed/KAobJXpOdsU?autoplay=1&mute=1&rel=0&playsinline=1&loop=1&playlist=KAobJXpOdsU"
+                    title="YouTube Live Stream / Replay Terakhir"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+              <!-- QR Code & Info Mobile (Kanan) -->
+              <div class="col-lg-4 text-center">
+                <div class="p-3 bg-white rounded border shadow-sm h-100 d-flex flex-column justify-content-center align-items-center">
+                  <span class="fw-bold text-dark mb-2" style="font-size: 0.85rem;">
+                    Nonton via Aplikasi Mobile
+                  </span>
+                  <a href="https://www.youtube.com/@Mtsafarisubuhcipayung/live" target="_blank" rel="noopener noreferrer" class="d-inline-block mb-2">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.youtube.com/@Mtsafarisubuhcipayung/live" 
+                         class="img-fluid border p-2 rounded bg-white shadow-sm" 
+                         style="width: 120px;" 
+                         alt="QR YouTube Live">
+                  </a>
+                  <div class="text-muted" style="font-size: 0.75rem;">
+                    <i class="fas fa-qrcode me-1"></i> Scan QR atau klik gambar untuk berpindah ke aplikasi YouTube di HP Anda.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grafik Section -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-6">
+        <div class="content-box h-100 py-3 px-3">
+          <div class="fw-bold small text-muted mb-2" style="font-size: 0.75rem;"><i class="fas fa-chart-bar me-1"></i> Ringkasan Alokasi Kas</div>
+          <div class="chart-wrapper">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="content-box h-100 py-3 px-3">
+          <div class="fw-bold small text-muted mb-2" style="font-size: 0.75rem;"><i class="fas fa-chart-line me-1"></i> Tren Pergerakan Kas</div>
+          <div class="chart-wrapper">
+            <canvas id="lineChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANNER AJAKAN DONASI SAHABAT YATIM & PIATU -->
+    <div class="donation-yatim-banner">
+      <div class="row align-items-center g-3 position-relative">
+        <div class="col-md-3 text-center">
+          <div class="donation-kids">🧒🏻👧🏻</div>
+          <div class="fw-bold text-white mt-1">Mari Berbagi ❤️</div>
+        </div>
+        <div class="col-md-5 text-center text-md-start">
+          <div class="badge bg-white text-success fw-bold mb-2 px-3 py-2">
+            <i class="fas fa-heart donation-heart me-1"></i> SEDEKAH & KEPEDULIAN
+          </div>
+          <h4 class="fw-bold text-white mb-2">Bantu Kebahagiaan Anak Yatim & Piatu</h4>
+          <div class="text-white fw-semibold" style="font-size:0.9rem;">
+            Setiap kebaikan yang Anda berikan dapat menjadi senyum, harapan dan kebahagiaan bagi anak-anak yatim dan piatu.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <a href="https://bit.ly/SahabatYatim-Piatu" target="_blank" rel="noopener noreferrer" class="donation-yatim-button">
+            <i class="fas fa-hand-holding-heart fa-lg"></i>
+            <span>KLIK DISINI DAN MULAI BERDONASI UNTUK SAHABAT YATIM DAN PIATU</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabel Transaksi -->
+    <div class="mb-4">
+      <div class="table-section-header">
+        <span>1. POS ALOKASI OPERASIONAL</span>
+        <span id="pokOpTotal">Pemasukan - Pengeluaran: Rp 0</span>
+      </div>
+      <div class="bg-white p-2 border border-top-0 rounded-bottom table-responsive">
+        <table class="table table-sm table-hover align-middle mb-0" style="font-size:0.8rem;">
+          <thead class="table-light">
+            <tr>
+              <th>Uraian / Deskripsi Kas</th>
+              <th class="text-end">Uang Masuk</th>
+              <th class="text-end">Uang Keluar</th>
+              <th id="thAction" class="text-center" style="display:none;">Aksi Admin</th>
+            </tr>
+          </thead>
+          <tbody id="txOpBody">
+            <tr><td colspan="4" class="text-center text-muted">Memuat data...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Infaq & Galeri Slider -->
+    <div class="content-box">
+      <div class="section-header-pill mb-3"><i class="fas fa-hand-holding-heart me-1"></i> Layanan Infaq & Galeri Majlis</div>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="bank-card mb-3">
+            <div class="text-danger fw-bold small mb-2"><i class="fas fa-heart me-1"></i> LAYANAN ONLINE TRANSFER INFAQ & SODAQOH</div>
+            <div class="fw-bold text-dark fs-5">No. Rekening BSI Syariah : 731601034770534</div>
+            <div class="text-muted small">Bank : BSI (Bank Syariah Indonesia)</div>
+            <div class="text-muted small">Atas Nama: Majlis Taklim Safari Subuh</div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 text-center border-start mt-3 mt-md-0">
+          <div class="small fw-bold text-success mb-2"><i class="fas fa-images me-1"></i> DOKUMENTASI & KEGIATAN MAJLIS</div>
+          
+          <div id="majlisPhotoCarousel" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators mb-1">
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="3"></button>
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="4"></button>
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="5"></button>
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="6"></button>
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="7"></button>
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="8"></button>
+              <button type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide-to="9"></button>
+            </div>
+            
+            <div class="carousel-inner" style="max-height: 220px;">
+              <div class="carousel-item active">
+                <img src="https://lh3.googleusercontent.com/d/1vGcIrS6FzgM6qGpywZko3iohblIxApTB" class="d-block w-100" alt="Foto 1" style="object-fit: cover; height: 220px;" onerror="this.src='https://via.placeholder.com/400x220/045237/FFFFFF?text=Kegiatan+1'">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Pembina dan Muspika Kecamatan Cipayung</small></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/d/1h7sLa9nZxWGHrUB7pfeuH6jzA683kW_w" class="d-block w-100" alt="Foto 2" style="object-fit: cover; height: 220px;" onerror="this.src='https://via.placeholder.com/400x220/033623/FFFFFF?text=Kegiatan+2'">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Penasehat Majlis Taklim Safari Subuh Kec. Cipayung</small></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/d/1My6kCbKUonkQPoq_6gP2KmQiC4J_NbIC" class="d-block w-100" alt="Foto 3" style="object-fit: cover; height: 220px;" onerror="this.src='https://via.placeholder.com/400x220/23BD77/FFFFFF?text=Kegiatan+3'">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Suasana Jamaah Majlis Taklim Safari Subuh</small></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/d/1bVTMEq0uNPGFkxun-ovbsYa0NI_2ZlM5" class="d-block w-100" alt="Foto 4" style="object-fit: cover; height: 220px;" onerror="this.src='https://via.placeholder.com/400x220/045237/FFFFFF?text=Kegiatan+4'">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Suasana Jamaah Majlis Taklim Safari Subuh</small></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/d/1QruRNm2yaDoJemqT4FmPY4WcRz_h1j8e" class="d-block w-100" alt="Foto 5" style="object-fit: cover; height: 220px;" onerror="this.src='https://via.placeholder.com/400x220/033623/FFFFFF?text=Kegiatan+5'">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Suasana Jamaah Majlis Taklim Safari Subuh</small></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/d/1vtQBrcSkUwcULqG0556go2ZyzxbcYlYk" class="d-block w-100" alt="Foto 6" style="object-fit: cover; height: 220px;">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Sambutan Ketua DKM Masjid</small></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/d/1UmZOXpUlTeoJlr8nzWFlg6GgmJLlXuAq" class="d-block w-100" alt="Foto 7" style="object-fit: cover; height: 220px;">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Sambutan Ketua Majlis Taklim Safari Subuh Kecamatan Cipayung</small></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/d/19vRLC4_Ju-lKFYGdP1utltRLVXVdPWpZ" class="d-block w-100" alt="Foto 8" style="object-fit: cover; height: 220px;">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Kajian Kitab Hadist Riyadhussholihin</small></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/d/1Ow0sXgv3b7ygtuX8O4VW3iuQBLyOn2ft" class="d-block w-100" alt="Foto 9" style="object-fit: cover; height: 220px;">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Pembacaan Doa</small></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/d/1zChUadJikVFyl5zijObyNWU0kYH9tRkc" class="d-block w-100" alt="Foto 10" style="object-fit: cover; height: 220px;">
+                <div class="carousel-caption d-block py-1 px-2 style-caption"><small style="font-size: 0.7rem;">Foto Bersama</small></div>
+              </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" style="width: 20px; height: 20px;"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#majlisPhotoCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" style="width: 20px; height: 20px;"></span>
+            </button>
+          </div>
+        </div>
+      </div>    
+      
+      <!-- Tombol Bantuan Pelayanan Petugas Pemulasaran Jenazah -->
+      <div class="mt-3">
+        <a 
+          href="https://bit.ly/Pet-PemulasaranJenazah"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-green-full shadow-sm"
+          style="background-color: #033623; color: white; font-size: 0.95rem; font-weight: 700; border: 1px solid #045237;"
+        >
+          <i class="fas fa-hands-helping me-2"></i>
+          KLIK UNTUK BANTUAN PELAYANAN PETUGAS PEMULASARAN JENAZAH
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Ticker / Running Text -->
+  <div class="bottom-ticker-bar">
+    <div class="ticker-label"><i class="fas fa-bullhorn me-1"></i> INFO MAJLIS</div>
+    <div class="ticker-content"><span class="ticker-text" id="runningTextDisplay">Memuat pengumuman...</span></div>
+  </div>
+
+  <!-- Modal Login Admin -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white py-2">
+          <h6 class="modal-title fw-bold"><i class="fas fa-lock me-1"></i> Login Admin</h6>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm" onsubmit="handleLoginSubmit(event)">
+            <div class="mb-2">
+              <label class="form-label small mb-1">Username</label>
+              <input type="text" id="loginUser" class="form-control form-control-sm" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small mb-1">Password</label>
+              <input type="password" id="loginPass" class="form-control form-control-sm" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-sm w-100 fw-bold">Masuk Admin</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- YouTube IFrame Player API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <!-- JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- JavaScript Module Pengingat Sholat -->
+  <script>
+    const PrayerReminder = (function() {
+
+      const audioCache = { adzan: null, bedug: null, kentongan: null };
+      const audioElements = { adzan: new Audio(), bedug: new Audio(), kentongan: new Audio() };
+
+      let isActivated = false;
+      let selectedSound = 'adzan';
+      let prayerTimes = {};
+
+      let currentLocation = {
+        lat: -6.32,
+        lng: 106.90,
+        name: 'Cipayung, Jakarta (Fallback GPS)'
+      };
+
+      let loadedScheduleDate = '';
+      let isFetchingSchedule = false;
+      let lastSuccessfulFetchAt = 0;
+
+      let monitorTimer = null;
+      let refreshTimer = null;
+      let locationWatchId = null;
+
+      let audioContext = null;
+      let audioUnlocked = false;
+
+      const triggerLock = {};
+
+      function getLocalDateString(date) {
+        const d = date || new Date();
+        return (
+          d.getFullYear() +
+          '-' +
+          String(d.getMonth() + 1).padStart(2, '0') +
+          '-' +
+          String(d.getDate()).padStart(2, '0')
+        );
+      }
+
+      function parsePrayerDate(time, baseDate) {
+        if (typeof time !== 'string') return null;
+        const match = time.trim().match(/^(\d{1,2}):(\d{2})$/);
+        if (!match) return null;
+
+        const hour = Number(match[1]);
+        const minute = Number(match[2]);
+
+        if (!Number.isFinite(hour) || !Number.isFinite(minute) || hour < 0 || hour > 23 || minute < 0 || minute > 59) {
+          return null;
+        }
+
+        const d = baseDate || new Date();
+        return new Date(d.getFullYear(), d.getMonth(), d.getDate(), hour, minute, 0, 0);
+      }
+
+      function updateLocationUI() {
+        const el = document.getElementById('prLocationText');
+        if (el) el.innerText = currentLocation.name;
+      }
+
+      function updateLastFetchUI() {
+        const el = document.getElementById('prLastUpdate');
+        if (el) {
+          el.innerText = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        }
+      }
+
+      function readPrayerTime(id, fallback) {
+        const el = document.getElementById(id);
+        const value = el && typeof el.innerText === 'string' ? el.innerText.trim() : '';
+        return /^\d{1,2}:\d{2}$/.test(value) ? value : fallback;
+      }
+
+      function loadFromDOMFallback() {
+        prayerTimes = {
+          Subuh: readPrayerTime('subuh-time', '04:40'),
+          Dzuhur: readPrayerTime('dzuhur-time', '11:57'),
+          Ashar: readPrayerTime('ashar-time', '15:17'),
+          Maghrib: readPrayerTime('maghrib-time', '17:57'),
+          Isya: readPrayerTime('isya-time', '19:04')
+        };
+        updateLocationUI();
+        const sourceEl = document.getElementById('prSourceText');
+        if (sourceEl) sourceEl.innerText = 'Layar Dashboard';
+        updateLastFetchUI();
+      }
+
+      function playFallbackBeep() {
+        try {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContextClass) return;
+          const ctx = new AudioContextClass();
+          if (ctx.state === 'suspended') ctx.resume().catch(function() {});
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(587.33, ctx.currentTime);
+          gain.gain.setValueAtTime(0.15, ctx.currentTime);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 1.5);
+        } catch (e) {
+          console.warn('Fallback Beep Error:', e);
+        }
+      }
+
+      async function unlockAudio() {
+        try {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (AudioContextClass) {
+            if (!audioContext) audioContext = new AudioContextClass();
+            if (audioContext.state === 'suspended') await audioContext.resume();
+          }
+          const silentAudio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==');
+          silentAudio.volume = 0.001;
+          try { await silentAudio.play(); } catch (e) { console.warn('Silent audio unlock:', e); }
+          audioUnlocked = true;
+          return true;
+        } catch (err) {
+          console.error('Audio unlock error:', err);
+          audioUnlocked = false;
+          return false;
+        }
+      }
+
+      function loadDriveAudio(type) {
+        return new Promise(function(resolve, reject) {
+          type = String(type || '').trim();
+          if (!type || !audioElements[type]) {
+            reject(new Error('Jenis audio tidak valid: ' + type));
+            return;
+          }
+          if (audioCache[type]) {
+            resolve(audioCache[type]);
+            return;
+          }
+          if (typeof google === 'undefined' || !google.script || !google.script.run) {
+            reject(new Error('google.script.run tidak tersedia.'));
+            return;
+          }
+          google.script.run
+            .withSuccessHandler(function(result) {
+              if (!result || !result.success || !result.base64) {
+                reject(new Error(result && result.error ? result.error : 'Audio Google Drive gagal dimuat.'));
+                return;
+              }
+              const mimeType = result.mimeType || 'audio/mpeg';
+              const dataUrl = 'data:' + mimeType + ';base64,' + result.base64;
+              audioCache[type] = dataUrl;
+              const audio = audioElements[type];
+              audio.preload = 'auto';
+              audio.src = dataUrl;
+              audio.load();
+              resolve(dataUrl);
+            })
+            .withFailureHandler(function(error) {
+              reject(error instanceof Error ? error : new Error(String(error && error.message ? error.message : error)));
+            })
+            .getAudioBase64(type);
+        });
+      }
+
+      async function preloadAllAudio() {
+        const types = ['adzan', 'bedug', 'kentongan'];
+        const results = await Promise.all(
+          types.map(async function(type) {
+            try {
+              await loadDriveAudio(type);
+              return { type: type, success: true };
+            } catch (err) {
+              console.error('Preload gagal untuk ' + type + ':', err);
+              return { type: type, success: false, error: err };
+            }
+          })
+        );
+        return results;
+      }
+
+      async function playDriveAudio(type) {
+        try {
+          type = String(type || selectedSound).trim();
+          if (!audioElements[type]) throw new Error('Audio "' + type + '" tidak tersedia.');
+          if (!audioCache[type]) await loadDriveAudio(type);
+
+          const audio = audioElements[type];
+          if (!audioCache[type]) throw new Error('Cache audio "' + type + '" kosong.');
+
+          audio.pause();
+          try { audio.currentTime = 0; } catch (e) {}
+
+          if (audio.src !== audioCache[type]) {
+            audio.src = audioCache[type];
+            audio.load();
+          }
+
+          audio.volume = 1.0;
+          const playPromise = audio.play();
+          if (playPromise !== undefined) await playPromise;
+          return true;
+        } catch (err) {
+          console.error('Gagal memutar audio:', type, err);
+          showAudioError(err);
+          return false;
+        }
+      }
+
+      async function testSound() {
+        const unlocked = await unlockAudio();
+        if (!unlocked) {
+          showAudioError(new Error('Browser belum mengizinkan audio. Tekan Test Suara lagi.'));
+          return;
+        }
+        try {
+          await loadDriveAudio(selectedSound);
+          await playDriveAudio(selectedSound);
+        } catch (err) {
+          console.error('Test audio gagal:', err);
+          playFallbackBeep();
+        }
+      }
+
+      async function changeSoundType(type) {
+        selectedSound = String(type || 'adzan');
+        localStorage.setItem('pr_sound_type', selectedSound);
+        stopAllAudio();
+
+        if (isActivated) {
+          try {
+            await loadDriveAudio(selectedSound);
+            await playDriveAudio(selectedSound);
+          } catch (err) {
+            console.error('Gagal memuat suara baru:', err);
+            showAudioError(err);
+          }
+        }
+      }
+
+      function stopAllAudio() {
+        Object.keys(audioElements).forEach(function(type) {
+          const audio = audioElements[type];
+          try { audio.pause(); audio.currentTime = 0; } catch (e) {}
+        });
+      }
+
+      function getLocationAndFetch() {
+        currentLocation = { lat: Number(currentLocation.lat) || -6.32, lng: Number(currentLocation.lng) || 106.90, name: 'Cipayung, Jakarta (Fallback GPS)' };
+        updateLocationUI();
+        fetchPrayerSchedule(false);
+
+        if (!navigator.geolocation) return;
+
+        try {
+          locationWatchId = navigator.geolocation.watchPosition(
+            function(position) {
+              if (!position || !position.coords) return;
+              const lat = Number(position.coords.latitude), lng = Number(position.coords.longitude);
+              if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+
+              const oldLat = Number(currentLocation.lat), oldLng = Number(currentLocation.lng);
+              currentLocation.lat = lat;
+              currentLocation.lng = lng;
+              currentLocation.name = 'GPS Terdeteksi';
+
+              updateLocationUI();
+              reverseGeocodeLocation(lat, lng, 0);
+
+              const moved = !Number.isFinite(oldLat) || !Number.isFinite(oldLng) || Math.abs(lat - oldLat) > 0.002 || Math.abs(lng - oldLng) > 0.002;
+              if (moved || !lastSuccessfulFetchAt) {
+                loadedScheduleDate = '';
+                installLocalFallback(new Date());
+                fetchPrayerSchedule(true);
+              }
+            },
+            function(error) {
+              console.warn('GPS tidak tersedia; fallback Cipayung digunakan.', error);
+              currentLocation = { lat: -6.32, lng: 106.90, name: 'Cipayung, Jakarta (Fallback GPS)' };
+              updateLocationUI();
+            },
+            { enableHighAccuracy: true, timeout: 15000, maximumAge: 5 * 60 * 1000 }
+          );
+        } catch (error) {
+          console.warn('GPS initialization gagal:', error);
+          currentLocation = { lat: -6.32, lng: 106.90, name: 'Cipayung, Jakarta (Fallback GPS)' };
+          updateLocationUI();
+        }
+      }
+
+      let reverseGeocodeRequestId = 0;
+      let reverseGeocodeTimer = null;
+
+      function setResolvedLocationName(name) {
+        try {
+          if (!currentLocation) return;
+          if (name && String(name).trim()) currentLocation.name = String(name).trim();
+          updateLocationUI();
+        } catch (error) { console.warn('Gagal memperbarui nama lokasi:', error); }
+      }
+
+      function reverseGeocodeLocation(lat, lng, attempt) {
+        try {
+          const nLat = Number(lat), nLng = Number(lng);
+          if (!Number.isFinite(nLat) || !Number.isFinite(nLng)) return;
+          const requestId = ++reverseGeocodeRequestId;
+          if (reverseGeocodeTimer) clearTimeout(reverseGeocodeTimer);
+          const retry = Number(attempt) || 0;
+          reverseGeocodeTimer = setTimeout(async function() {
+            let timeoutId = null;
+            try {
+              const controller = new AbortController();
+              timeoutId = setTimeout(() => { try { controller.abort(); } catch (_) {} }, 10000);
+              const url = 'https://nominatim.openstreetmap.org/reverse' +
+                '?format=jsonv2&lat=' + encodeURIComponent(nLat) +
+                '&lon=' + encodeURIComponent(nLng) +
+                '&zoom=18&addressdetails=1&accept-language=id';
+              const response = await fetch(url, { method:'GET', cache:'no-store', headers:{'Accept':'application/json'}, signal:controller.signal });
+              clearTimeout(timeoutId); timeoutId = null;
+              if (!response.ok) throw new Error('HTTP ' + response.status);
+              const data = await response.json();
+              if (requestId !== reverseGeocodeRequestId) return;
+              const a = data && data.address ? data.address : {};
+              const candidates = [a.neighbourhood,a.suburb,a.village,a.town,a.city_district,a.city,a.municipality,a.county];
+              const parts = [];
+              for (let i=0;i<candidates.length;i++) {
+                const v = candidates[i] == null ? '' : String(candidates[i]).trim();
+                if (v && !parts.includes(v)) parts.push(v);
+                if (parts.length >= 2) break;
+              }
+              if (a.state) { const st=String(a.state).trim(); if (st && !parts.includes(st)) parts.push(st); }
+              let name = parts.join(', ');
+              if (!name && data && data.display_name) name=String(data.display_name).split(',').slice(0,4).join(',').trim();
+              if (!name) name='GPS ('+nLat.toFixed(5)+', '+nLng.toFixed(5)+')';
+              setResolvedLocationName(name);
+            } catch (error) {
+              if (timeoutId) clearTimeout(timeoutId);
+              console.warn('Reverse geocoding gagal:', error);
+              if (retry < 1 && requestId === reverseGeocodeRequestId) { reverseGeocodeLocation(nLat,nLng,retry+1); return; }
+              if (requestId === reverseGeocodeRequestId) setResolvedLocationName('GPS ('+nLat.toFixed(5)+', '+nLng.toFixed(5)+')');
+            }
+          },300);
+        } catch (error) { console.warn('Reverse geocoding error:', error); }
+      }
+
+      function degToRad(deg) { return deg * Math.PI / 180; }
+      function radToDeg(rad) { return rad * 180 / Math.PI; }
+      function dayOfYear(date) { const start = new Date(date.getFullYear(), 0, 0); return Math.floor((date - start) / 86400000); }
+      function normalizeMinutes(value) { return ((Math.round(value) % 1440) + 1440) % 1440; }
+      function minutesToTime(value) { const total = normalizeMinutes(value); const h = Math.floor(total / 60); const m = total % 60; return String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0'); }
+
+      function solarData(date) {
+        const n = dayOfYear(date);
+        const gamma = 2 * Math.PI / 365 * (n - 1);
+        const eqtime = 229.18 * (0.000075 + 0.001868 * Math.cos(gamma) - 0.032077 * Math.sin(gamma) - 0.014615 * Math.cos(2 * gamma) - 0.040849 * Math.sin(2 * gamma));
+        const decl = 0.006918 - 0.399912 * Math.cos(gamma) + 0.070257 * Math.sin(gamma) - 0.006758 * Math.cos(2 * gamma) + 0.000907 * Math.sin(2 * gamma) - 0.002697 * Math.cos(3 * gamma) + 0.00148 * Math.sin(3 * gamma);
+        return { eqtime: eqtime, decl: decl };
+      }
+
+      function solarNoon(date, longitude) {
+        const d = solarData(date);
+        const tz = -date.getTimezoneOffset() / 60;
+        return 720 - 4 * longitude - d.eqtime + tz * 60;
+      }
+
+      function solarTime(date, latitude, longitude, altitude, morning) {
+        const d = solarData(date);
+        const lat = degToRad(latitude);
+        const cosH = (Math.sin(degToRad(altitude)) - Math.sin(lat) * Math.sin(d.decl)) / (Math.cos(lat) * Math.cos(d.decl));
+        if (cosH < -1 || cosH > 1) return null;
+        const h = radToDeg(Math.acos(cosH));
+        const noon = solarNoon(date, longitude);
+        return morning ? noon - 4 * h : noon + 4 * h;
+      }
+
+      function localAsrTime(date, latitude, longitude) {
+        const d = solarData(date);
+        const lat = degToRad(latitude);
+        const altitude = radToDeg(Math.atan(1 / (1 + Math.tan(Math.abs(lat - d.decl)))));
+        return solarTime(date, latitude, longitude, altitude, false);
+      }
+
+      function calculateLocalPrayerSchedule(date) {
+        const lat = Number(currentLocation.lat);
+        const lng = Number(currentLocation.lng);
+        if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+
+        const subuh = solarTime(date, lat, lng, -20, true);
+        const dzuhur = solarNoon(date, lng) + 2;
+        const ashar = localAsrTime(date, lat, lng);
+        const maghrib = solarTime(date, lat, lng, -0.833, false);
+        const isya = solarTime(date, lat, lng, -18, false);
+
+        if ([subuh, dzuhur, ashar, maghrib, isya].some(v => v === null || !Number.isFinite(v))) return null;
+
+        return {
+          Subuh: minutesToTime(subuh),
+          Dzuhur: minutesToTime(dzuhur),
+          Ashar: minutesToTime(ashar),
+          Maghrib: minutesToTime(maghrib + 2),
+          Isya: minutesToTime(isya)
+        };
+      }
+
+      function scheduleIsValid(schedule) {
+        if (!schedule) return false;
+        return ['Subuh','Dzuhur','Ashar','Maghrib','Isya'].every(function(k) {
+          return typeof schedule[k] === 'string' && /^\d{1,2}:\d{2}$/.test(schedule[k].trim());
+        });
+      }
+
+      function saveLocalSchedule(dateStr, schedule) {
+        try {
+          if (!scheduleIsValid(schedule)) return;
+          localStorage.setItem('pr_local_schedule_' + dateStr, JSON.stringify({ schedule: schedule, savedAt: Date.now() }));
+        } catch (e) { console.warn('Cache jadwal lokal gagal:', e); }
+      }
+
+      function loadLocalSchedule(dateStr) {
+        try {
+          const raw = localStorage.getItem('pr_local_schedule_' + dateStr);
+          if (!raw) return null;
+          const data = JSON.parse(raw);
+          return data && scheduleIsValid(data.schedule) ? data.schedule : null;
+        } catch (e) { return null; }
+      }
+
+      function installLocalFallback(date) {
+        const dateStr = getLocalDateString(date);
+        let schedule = loadLocalSchedule(dateStr);
+        if (!schedule) {
+          schedule = calculateLocalPrayerSchedule(date);
+          if (schedule) saveLocalSchedule(dateStr, schedule);
+        }
+        if (!schedule || !scheduleIsValid(schedule)) return false;
+
+        prayerTimes = schedule;
+        loadedScheduleDate = dateStr;
+        lastSuccessfulFetchAt = Date.now();
+
+        const sourceEl = document.getElementById('prSourceText');
+        if (sourceEl) sourceEl.innerText = 'Perhitungan Lokal / Offline';
+
+        updateDashboardUI();
+        updateLocationUI();
+        updateLastFetchUI();
+        return true;
+      }
+
+      async function fetchPrayerSchedule(force) {
+        const todayStr = getLocalDateString();
+        if (isFetchingSchedule) return false;
+        if (!force && loadedScheduleDate === todayStr && scheduleIsValid(prayerTimes)) return true;
+
+        isFetchingSchedule = true;
+
+        try {
+          if (typeof google === 'undefined' || !google.script || !google.script.run) {
+            throw new Error('Google Apps Script tidak tersedia.');
+          }
+
+          const result = await new Promise(function(resolve, reject) {
+            google.script.run
+              .withSuccessHandler(resolve)
+              .withFailureHandler(reject)
+              .getPrayerSchedule(todayStr);
+          });
+
+          if (!result || !result.success || !scheduleIsValid(result.schedule)) {
+            throw new Error(result && result.error ? result.error : 'Jadwal sholat dari server tidak valid.');
+          }
+
+          prayerTimes = {
+            Subuh: result.schedule.Subuh.trim(),
+            Dzuhur: result.schedule.Dzuhur.trim(),
+            Ashar: result.schedule.Ashar.trim(),
+            Maghrib: result.schedule.Maghrib.trim(),
+            Isya: result.schedule.Isya.trim()
+          };
+
+          loadedScheduleDate = todayStr;
+          lastSuccessfulFetchAt = Date.now();
+          saveLocalSchedule(todayStr, prayerTimes);
+
+          const sourceEl = document.getElementById('prSourceText');
+          if (sourceEl) sourceEl.innerText = result.source || 'MyQuran API';
+
+          updateDashboardUI();
+          updateLocationUI();
+          updateLastFetchUI();
+          updateCountdownUI(getNextPrayer(new Date()), 'Menunggu jadwal...');
+
+          return true;
+        } catch (error) {
+          console.warn('Jadwal online gagal; menggunakan cache/perhitungan lokal:', error);
+          if (loadedScheduleDate !== todayStr || !scheduleIsValid(prayerTimes)) {
+            installLocalFallback(new Date());
+          }
+          const sourceEl = document.getElementById('prSourceText');
+          if (sourceEl && !scheduleIsValid(prayerTimes)) {
+            sourceEl.innerText = 'Perhitungan Lokal / Offline';
+          }
+
+          updateDashboardUI();
+          updateLocationUI();
+          updateLastFetchUI();
+          updateCountdownUI(getNextPrayer(new Date()), 'Menunggu jadwal...');
+          return false;
+        } finally {
+          isFetchingSchedule = false;
+        }
+      }
+
+      function updateDashboardUI() {
+        const mapping = { Subuh: 'subuh-time', Dzuhur: 'dzuhur-time', Ashar: 'ashar-time', Maghrib: 'maghrib-time', Isya: 'isya-time' };
+        Object.keys(mapping).forEach(function(name) {
+          const el = document.getElementById(mapping[name]);
+          if (el && prayerTimes[name]) el.innerText = prayerTimes[name];
+        });
+      }
+
+      function getNextPrayer(now) {
+        const names = ['Subuh', 'Dzuhur', 'Ashar', 'Maghrib', 'Isya'];
+
+        for (let i = 0; i < names.length; i++) {
+          const name = names[i];
+          const date = parsePrayerDate(prayerTimes[name], now);
+          if (date && date.getTime() > now.getTime()) {
+            return { name: name, time: prayerTimes[name], date: date };
+          }
+        }
+
+        const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+        const tomorrowStr = getLocalDateString(tomorrow);
+
+        let tomorrowSchedule = loadLocalSchedule(tomorrowStr);
+        if (!tomorrowSchedule) {
+          tomorrowSchedule = calculateLocalPrayerSchedule(tomorrow);
+          if (tomorrowSchedule) saveLocalSchedule(tomorrowStr, tomorrowSchedule);
+        }
+
+        const tomorrowSubuhTime = tomorrowSchedule && tomorrowSchedule.Subuh ? tomorrowSchedule.Subuh : null;
+        const tomorrowSubuh = parsePrayerDate(tomorrowSubuhTime, tomorrow);
+
+        if (tomorrowSubuh) {
+          return { name: 'Subuh Besok', time: tomorrowSubuhTime, date: tomorrowSubuh };
+        }
+        return null;
+      }
+
+      function updateCountdownUI(nextPrayer, emptyMessage) {
+        const nameEl = document.getElementById('prNextName');
+        const timeEl = document.getElementById('prNextTime');
+        const countdownEl = document.getElementById('prCountdown');
+
+        if (!nextPrayer) {
+          if (nameEl) nameEl.innerText = emptyMessage || 'Memuat jadwal...';
+          if (timeEl) timeEl.innerText = '--:--';
+          if (countdownEl) countdownEl.innerText = '--:--:--';
+          return;
+        }
+
+        const diff = Math.max(0, nextPrayer.date.getTime() - Date.now());
+        const totalSeconds = Math.floor(diff / 1000);
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        if (nameEl) nameEl.innerText = nextPrayer.name;
+        if (timeEl) timeEl.innerText = nextPrayer.time;
+        if (countdownEl) {
+          countdownEl.innerText = String(hours).padStart(2, '0') + ':' + String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+        }
+      }
+
+      function updateMonitoringLoop() {
+        try {
+          const now = new Date();
+          const todayStr = getLocalDateString(now);
+
+          if (loadedScheduleDate !== todayStr) {
+            installLocalFallback(now);
+            updateDashboardUI();
+            updateCountdownUI(getNextPrayer(now), 'Memuat jadwal hari baru...');
+            fetchPrayerSchedule(true);
+            return;
+          }
+
+          if (!scheduleIsValid(prayerTimes)) installLocalFallback(now);
+
+          const nextPrayer = getNextPrayer(now);
+          updateCountdownUI(nextPrayer, 'Menunggu jadwal...');
+          checkPrayerTrigger(now);
+        } catch (error) {
+          console.error('Prayer monitoring error:', error);
+          try {
+            updateCountdownUI(getNextPrayer(new Date()), 'Menunggu jadwal...');
+          } catch (recoveryError) {
+            console.error('Countdown recovery error:', recoveryError);
+          }
+        }
+      }
+
+      function checkPrayerTrigger(now) {
+        const names = ['Subuh', 'Dzuhur', 'Ashar', 'Maghrib', 'Isya'];
+        for (let i = 0; i < names.length; i++) {
+          const name = names[i];
+          const prayerDate = parsePrayerDate(prayerTimes[name], now);
+          if (!prayerDate) continue;
+
+          const diff = now.getTime() - prayerDate.getTime();
+          if (diff >= 0 && diff <= 90000) {
+            triggerPrayerReminder(name);
+          }
+        }
+      }
+
+      async function triggerPrayerReminder(prayerName) {
+        if (!isActivated) return;
+
+        const todayStr = getLocalDateString();
+        const playedKey = 'pr_played_v2_' + todayStr + '_' + prayerName;
+
+        if (triggerLock[playedKey]) return;
+        if (localStorage.getItem(playedKey) === 'true') {
+          triggerLock[playedKey] = true;
+          return;
+        }
+
+        triggerLock[playedKey] = true;
+
+        const alertBanner = document.getElementById('prAlertBanner');
+        const alertText = document.getElementById('prAlertText');
+
+        if (alertBanner && alertText) {
+          alertText.innerText = '🕌 WAKTU ' + prayerName.toUpperCase() + ' TELAH TIBA';
+          alertBanner.classList.remove('d-none');
+          setTimeout(function() { alertBanner.classList.add('d-none'); }, 300000);
+        }
+
+        if ('Notification' in window && Notification.permission === 'granted') {
+          try {
+            new Notification('Waktu Sholat ' + prayerName, { body: 'Telah memasuki waktu sholat ' + prayerName + '.' });
+          } catch (e) { console.warn('Notification error:', e); }
+        }
+
+        try {
+          const played = await playDriveAudio(selectedSound);
+          if (played) {
+            localStorage.setItem(playedKey, 'true');
+            return;
+          }
+          delete triggerLock[playedKey];
+        } catch (error) {
+          console.warn('Alarm audio error:', error);
+          delete triggerLock[playedKey];
+        }
+      }
+
+      async function toggleActivation() {
+        if (!isActivated) {
+          const unlocked = await unlockAudio();
+          if (!unlocked) {
+            alert('Browser belum mengizinkan suara. Silakan tekan "Aktifkan Pengingat" kembali.');
+            return;
+          }
+          setActivationState(true, true);
+
+          const preloadResults = await preloadAllAudio();
+          const currentAudioOK = preloadResults.some(function(item) { return item.type === selectedSound && item.success; });
+
+          if (!currentAudioOK) {
+            showAudioError(new Error('Suara ' + selectedSound + ' belum berhasil dimuat dari Google Drive.'));
+            return;
+          }
+          await playDriveAudio(selectedSound);
+        } else {
+          stopAllAudio();
+          setActivationState(false, true);
+        }
+      }
+
+      function setActivationState(active, saveStorage) {
+        isActivated = active;
+        if (saveStorage !== false) localStorage.setItem('pr_activated', active ? 'true' : 'false');
+
+        const btn = document.getElementById('prBtnToggle');
+        const dot = document.getElementById('prStatusDot');
+        const text = document.getElementById('prStatusText');
+
+        if (active) {
+          if (btn) {
+            btn.className = 'btn btn-sm btn-outline-light fw-bold';
+            btn.innerHTML = '<i class="fas fa-volume-up me-1"></i> 🔊 Pengingat Aktif';
+          }
+          if (dot) dot.className = 'prayer-reminder-status-dot active';
+          if (text) text.innerText = 'Pengingat Aktif';
+        } else {
+          if (btn) {
+            btn.className = 'btn btn-sm btn-success fw-bold';
+            btn.innerHTML = '<i class="fas fa-power-off me-1"></i> 🔇 Pengingat Nonaktif';
+          }
+          if (dot) dot.className = 'prayer-reminder-status-dot inactive';
+          if (text) text.innerText = 'Pengingat Nonaktif';
+        }
+      }
+
+      function showAudioError(err) {
+        const message = err && err.message ? err.message : String(err || 'Unknown error');
+        const alertText = document.getElementById('prAlertText');
+        if (alertText) alertText.innerText = '⚠️ Suara gagal diputar: ' + message;
+        console.error('Audio error:', err);
+      }
+
+      function init() {
+        const savedActivation = localStorage.getItem('pr_activated');
+        const savedSound = localStorage.getItem('pr_sound_type');
+
+        if (savedSound) {
+          selectedSound = savedSound;
+          const select = document.getElementById('prSoundType');
+          if (select) select.value = savedSound;
+        }
+
+        if (!installLocalFallback(new Date())) loadFromDOMFallback();
+
+        loadedScheduleDate = getLocalDateString();
+        updateMonitoringLoop();
+        getLocationAndFetch();
+
+        if (!monitorTimer) monitorTimer = setInterval(updateMonitoringLoop, 1000);
+        if (!refreshTimer) refreshTimer = setInterval(function() { fetchPrayerSchedule(true); }, 15 * 60 * 1000);
+
+        function refreshGpsOnResume() {
+          try {
+            if (!navigator.geolocation) return;
+            navigator.geolocation.getCurrentPosition(function(position) {
+              try {
+                const lat=Number(position.coords.latitude), lng=Number(position.coords.longitude);
+                if (!Number.isFinite(lat)||!Number.isFinite(lng)) return;
+                currentLocation={lat:lat,lng:lng,name:'GPS Terdeteksi'};
+                updateLocationUI();
+                reverseGeocodeLocation(lat,lng,0);
+                fetchPrayerSchedule(true);
+              } catch(error) { console.warn('Sinkronisasi GPS resume gagal:',error); }
+            }, function(error) { console.warn('GPS resume tidak tersedia:',error); }, {enableHighAccuracy:true,timeout:12000,maximumAge:0});
+          } catch(error) { console.warn('refreshGpsOnResume error:',error); }
+        }
+
+        document.addEventListener('visibilitychange', function() {
+          if (document.visibilityState !== 'visible') return;
+          refreshGpsOnResume();
+          updateMonitoringLoop();
+          fetchPrayerSchedule(true);
+
+          if (navigator.geolocation) {
+            try {
+              navigator.geolocation.getCurrentPosition(
+                function(position) {
+                  if (!position || !position.coords) return;
+                  const lat = Number(position.coords.latitude), lng = Number(position.coords.longitude);
+                  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+
+                  currentLocation = { lat: lat, lng: lng, name: 'GPS Terdeteksi' };
+                  updateLocationUI();
+                  reverseGeocodeLocation(lat, lng, 0);
+                  fetchPrayerSchedule(true);
+                },
+                function() {},
+                { enableHighAccuracy: true, timeout: 15000, maximumAge: 5 * 60 * 1000 }
+              );
+            } catch (error) { console.warn('GPS resume error:', error); }
+          }
+        });
+
+        if (savedActivation === 'true') setActivationState(false, false);
+      }
+
+      return {
+        init: init,
+        toggleActivation: toggleActivation,
+        changeSoundType: changeSoundType,
+        testSound: testSound
+      };
+
+    })();
+
+    document.addEventListener('DOMContentLoaded', function() {
+      PrayerReminder.init();
+    });
+  </script>
+
+  <!-- Script Dashboard utama -->
+  <script>
+    var isAdminLoggedIn = false; 
+    var barChartObj = null; 
+    var lineChartObj = null;
+
+    // YOUTUBE LIVE / REPLAY OTOMATIS
+    var youtubeCurrentEmbedUrl = "";
+    var youtubeCurrentVideoId = "";
+    var youtubeCheckTimer = null;
+    var YOUTUBE_CHECK_INTERVAL = 60 * 1000;
+
+    function extractYouTubeVideoId(url) {
+      var match = String(url || "").match(/\/embed\/([A-Za-z0-9_-]{11})/);
+      return match ? match[1] : "";
+    }
+
+    function updateLiveStatusBadge(isLoading) {
+      var badge = document.getElementById("liveStatusBadge");
+      if (!badge) return;
+      if (isLoading) {
+        badge.className = "badge bg-light text-secondary fw-bold text-uppercase";
+        badge.innerHTML = '<i class="fas fa-circle-notch fa-spin me-1"></i> Memuat Live...';
+      } else {
+        badge.className = "badge bg-light text-danger fw-bold text-uppercase";
+        badge.innerHTML = '<i class="fas fa-circle me-1 text-danger animate-pulse"></i> LIVE / REPLAY OTOMATIS';
+      }
+    }
+
+    function setYouTubeIframe(embedUrl, forceReload) {
+      var player = document.getElementById("mainLivePlayer");
+      if (!player || !embedUrl) return;
+
+      if (!forceReload && youtubeCurrentEmbedUrl === embedUrl) return;
+
+      youtubeCurrentEmbedUrl = embedUrl;
+      youtubeCurrentVideoId = extractYouTubeVideoId(embedUrl);
+      player.src = embedUrl;
+    }
+
+    function loadYouTubeLivePlayer(forceReload) {
+      if (typeof google === 'undefined' || !google.script || !google.script.run) {
+        console.error('Google Apps Script tidak tersedia.');
+        return;
+      }
+
+      google.script.run
+        .withSuccessHandler(function(embedUrl) {
+          if (!embedUrl) return;
+          var videoId = extractYouTubeVideoId(embedUrl);
+          if (!videoId) {
+            console.error('URL YouTube dari server tidak valid:', embedUrl);
+            return;
+          }
+          updateLiveStatusBadge(false);
+          setYouTubeIframe(embedUrl, forceReload);
+        })
+        .withFailureHandler(function(error) {
+          console.error('Gagal mengambil video YouTube:', error);
+          updateLiveStatusBadge(false);
+        })
+        .getYouTubeEmbedUrl();
+    }
+
+    function startYouTubeAutoRefresh() {
+      updateLiveStatusBadge(true);
+
+      var player = document.getElementById("mainLivePlayer");
+      if (player && (!player.src || player.src === 'about:blank')) {
+        player.src = 'https://www.youtube.com/embed/KAobJXpOdsU?autoplay=1&mute=1&rel=0&playsinline=1&loop=1&playlist=KAobJXpOdsU';
+      }
+
+      loadYouTubeLivePlayer(true);
+
+      if (youtubeCheckTimer) clearInterval(youtubeCheckTimer);
+      youtubeCheckTimer = setInterval(function() {
+        loadYouTubeLivePlayer(false);
+      }, YOUTUBE_CHECK_INTERVAL);
+    }
+
+    function startClockAndDate() {
+      function update() {
+        var d = new Date();
+        var clockEl = document.getElementById("clockDisplay");
+        var dateEl = document.getElementById("dateDisplay");
+        if(clockEl) clockEl.innerText = d.toLocaleTimeString("id-ID") + " WIB";
+        if(dateEl) {
+          var options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+          dateEl.innerText = d.toLocaleDateString("id-ID", options);
+        }
+      }
+      update();
+      setInterval(update, 1000);
+    }
+
+    function formatRupiah(n) { 
+      return "Rp " + Number(n || 0).toLocaleString("id-ID"); 
+    }
+
+    function loadDashboardData() {
+      var fType = document.getElementById("filterTypeSelect") ? document.getElementById("filterTypeSelect").value : "Semua Transaksi";
+      if (typeof google !== "undefined" && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(renderDashboard)
+          .withFailureHandler(handleDataError)
+          .getDashboardData(fType);
+      } else {
+        handleDataError("Lingkungan Google Apps Script tidak terdeteksi.");
+      }
+    }
+
+    function handleDataError(err) {
+      console.error(err);
+    }
+
+    function applyFilter() {
+      loadDashboardData();
+    }
+
+    function renderDashboard(res) {
+      if (!res || !res.success) {
+        console.error("Gagal memuat data:", res ? res.error : "Unknown error");
+        return;
+      }
+      var d = res.data;
+      
+      if (d.runningText) {
+        document.getElementById("runningTextDisplay").innerText = d.runningText;
+        if(document.getElementById("newRunningText")) document.getElementById("newRunningText").value = d.runningText;
+      }
+      
+      var cs = d.categorySummary;
+      document.getElementById("incOp").innerText = formatRupiah(cs.income.operasional);
+      document.getElementById("incPem").innerText = formatRupiah(cs.income.pembangunan);
+      
+      document.getElementById("expOp").innerText = formatRupiah(cs.expense.operasional);
+      document.getElementById("expPem").innerText = formatRupiah(cs.expense.pembangunan);
+      
+      document.getElementById("balOp").innerText = formatRupiah(cs.balance.operasional);
+      document.getElementById("balPem").innerText = formatRupiah(cs.balance.pembangunan);
+      
+      document.getElementById("pokOpTotal").innerText = "Pemasukan - Pengeluaran: " + formatRupiah(cs.balance.operasional);
+      
+      renderInfoList(d.informations);
+      renderSponsors(d.activeSponsors || []);
+      renderTxTable(d.transactions);
+      renderCharts(cs, d.transactions);
+    }
+
+    function renderInfoList(infos) {
+      var container = document.getElementById("infoContainer");
+      if (!infos || infos.length === 0) {
+        container.innerHTML = '<div class="text-center text-muted py-3">Belum ada informasi/pengumuman.</div>';
+        return;
+      }
+      var html = "";
+      infos.forEach(function(item) {
+        html += '<div class="info-card">';
+        html += '<div class="d-flex justify-content-between align-items-center mb-1">';
+        html += '<strong class="text-dark">' + item.title + '</strong>';
+        html += '<small class="text-muted" style="font-size:0.7rem;">' + item.date + '</small>';
+        html += '</div>';
+        html += '<div class="small text-secondary" style="white-space: pre-line;">' + item.content + '</div>';
+        if (isAdminLoggedIn) {
+          html += '<div class="text-end mt-2"><button class="btn btn-danger btn-sm py-0 px-2" style="font-size:0.7rem;" onclick="deleteInfo(\'' + item.id + '\')"><i class="fas fa-trash me-1"></i>Hapus</button></div>';
+        }
+        html += '</div>';
+      });
+      container.innerHTML = html;
+    }
+
+    function renderTxTable(txs) {
+      var tbody = document.getElementById("txOpBody");
+      if (!txs || txs.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" class="text-center text-muted">Belum ada transaksi tercatat untuk filter ini.</td></tr>';
+        return;
+      }
+      var html = "";
+      txs.forEach(function(tx) {
+        var isMasuk = tx.type === "MASUK";
+        var masukStr = isMasuk ? formatRupiah(tx.amount) : "-";
+        var keluarStr = !isMasuk ? formatRupiah(tx.amount) : "-";
+        
+        html += '<tr>';
+        html += '<td><div>' + tx.description + '</div><small class="text-muted" style="font-size:0.7rem;">' + tx.date + ' | ' + tx.category + '</small></td>';
+        html += '<td class="text-end text-success fw-bold">' + masukStr + '</td>';
+        html += '<td class="text-end text-danger fw-bold">' + keluarStr + '</td>';
+        if (isAdminLoggedIn) {
+          html += '<td class="text-center"><button class="btn btn-outline-danger btn-sm py-0 px-1" style="font-size:0.68rem;" onclick="deleteTx(\'' + tx.id + '\')"><i class="fas fa-trash"></i></button></td>';
+        }
+        html += '</tr>';
+      });
+      tbody.innerHTML = html;
+    }
+
+    function renderCharts(cs, txs) {
+      var ctxBar = document.getElementById("barChart").getContext("2d");
+      if (barChartObj) barChartObj.destroy();
+      
+      barChartObj = new Chart(ctxBar, {
+        type: "bar",
+        data: {
+          labels: ["Operasional", "Pembangunan", "Yatim/Duafa"],
+          datasets: [
+            { label: "Pemasukan", data: [cs.income.operasional, cs.income.pembangunan, cs.income.yatim], backgroundColor: "#23BD77" },
+            { label: "Pengeluaran", data: [cs.expense.operasional, cs.expense.pembangunan, cs.expense.yatim], backgroundColor: "#DC3545" }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { labels: { boxWidth: 12, font: { size: 10 } } } },
+          scales: { x: { ticks: { font: { size: 9 } } }, y: { ticks: { font: { size: 9 } } } }
+        }
+      });
+
+      var dates = [];
+      var incomes = [];
+      var expenses = [];
+      var reversed = (txs || []).slice().reverse();
+      
+      reversed.forEach(function(t) {
+        dates.push(t.date);
+        if(t.type === "MASUK") {
+          incomes.push(t.amount);
+          expenses.push(0);
+        } else {
+          incomes.push(0);
+          expenses.push(t.amount);
+        }
+      });
+
+      var ctxLine = document.getElementById("lineChart").getContext("2d");
+      if (lineChartObj) lineChartObj.destroy();
+      
+      lineChartObj = new Chart(ctxLine, {
+        type: "line",
+        data: {
+          labels: dates.length ? dates : ["--"],
+          datasets: [
+            { label: "Masuk", data: incomes.length ? incomes : [0], borderColor: "#23BD77", tension: 0.3, fill: false },
+            { label: "Keluar", data: expenses.length ? expenses : [0], borderColor: "#DC3545", tension: 0.3, fill: false }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { labels: { boxWidth: 12, font: { size: 10 } } } },
+          scales: { x: { ticks: { font: { size: 8 } } }, y: { ticks: { font: { size: 9 } } } }
+        }
+      });
+    }
+
+    // SPONSOR / IKLAN BERBAYAR
+    function escapeSponsorHtml(value) { return String(value == null ? '' : value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;'); }
+    function safeSponsorUrl(url) { var value=String(url||'').trim(); return /^https?:\/\//i.test(value) ? value : '#'; }
+
+    function getGoogleDriveFileId(url) {
+      var value = String(url || '').trim();
+      var patterns = [
+        /drive\.google\.com\/file\/d\/([A-Za-z0-9_-]+)/i,
+        /drive\.google\.com\/(?:open|uc|thumbnail)\?(?:[^#]*?&)?id=([A-Za-z0-9_-]+)/i,
+        /drive\.google\.com\/uc\?(?:[^#]*?&)?export=[^&]+&id=([A-Za-z0-9_-]+)/i,
+        /googleusercontent\.com\/d\/([A-Za-z0-9_-]+)/i
+      ];
+      for (var i = 0; i < patterns.length; i++) {
+        var match = value.match(patterns[i]);
+        if (match && match[1]) return match[1];
+      }
+      return '';
+    }
+
+    function normalizeSponsorImageUrl(url) {
+      var value = String(url || '').trim();
+      if (!/^https?:\/\//i.test(value)) return '';
+      var driveId = getGoogleDriveFileId(value);
+      if (driveId) return 'https://drive.google.com/thumbnail?id=' + encodeURIComponent(driveId) + '&sz=w1600';
+      return value;
+    }
+
+    function renderSponsors(sponsors) {
+      var container=document.getElementById('sponsorContainer'); if(!container) return;
+      if(!Array.isArray(sponsors)||!sponsors.length){container.innerHTML='';container.style.display='none';return;}
+      var html='<div class="sponsor-section-label"><span><i class="fas fa-bullhorn me-1"></i> Sponsor / Mitra Pendukung</span><span class="badge text-bg-light border">Iklan Resmi</span></div>';
+      sponsors.forEach(function(s){
+        var link=safeSponsorUrl(s.link), image=normalizeSponsorImageUrl(s.bannerUrl);
+        html+='<div class="sponsor-ad-card mb-3"><a class="sponsor-ad-link" href="'+escapeSponsorHtml(link)+'" target="_blank" rel="noopener noreferrer sponsored">';
+        if(image){
+          html+='<div class="sponsor-ad-banner-wrap"><img class="sponsor-ad-image" src="'+escapeSponsorHtml(image)+'" alt="Banner iklan '+escapeSponsorHtml(s.sponsorName)+'" loading="eager"></div>';
+        } else {
+          html+='<div class="sponsor-ad-banner-fallback"><div><i class="fas fa-bullhorn"></i><strong>IKLAN SPONSOR</strong><br><small>'+escapeSponsorHtml(s.sponsorName)+'</small></div></div>';
+        }
+        html+='<div class="sponsor-ad-body"><div class="sponsor-ad-name">'+escapeSponsorHtml(s.sponsorName)+'</div><div class="sponsor-ad-title">'+escapeSponsorHtml(s.title)+'</div>';
+        if(s.description) html+='<div class="sponsor-ad-description">'+escapeSponsorHtml(s.description)+'</div>';
+        if(link!=='#') html+='<span class="sponsor-ad-cta">Lihat Penawaran <i class="fas fa-arrow-right ms-1"></i></span>';
+        html+='</div></a></div>';
+      });
+      container.innerHTML=html; container.style.display='block';
+
+      container.querySelectorAll('.sponsor-ad-image').forEach(function(img){
+        var driveId = getGoogleDriveFileId(img.getAttribute('src') || '');
+        var attempts = [];
+        if (driveId) {
+          attempts = [
+            'https://lh3.googleusercontent.com/d/' + encodeURIComponent(driveId),
+            'https://drive.google.com/uc?export=view&id=' + encodeURIComponent(driveId)
+          ];
+        }
+        img.addEventListener('error', function(){
+          var next = attempts.shift();
+          if (next) {
+            img.src = next;
+            return;
+          }
+          var wrap = img.parentElement;
+          if (!wrap || wrap.getAttribute('data-fallback-shown') === '1') return;
+          wrap.setAttribute('data-fallback-shown', '1');
+          wrap.innerHTML = '<div class="sponsor-ad-banner-fallback"><div><i class="fas fa-bullhorn"></i><strong>IKLAN SPONSOR</strong><br><small>Banner tidak dapat dimuat. Pastikan file gambar dapat diakses publik.</small></div></div>';
+        });
+      });
+    }
+
+    function loadSponsorAdmin(){
+      if(!isAdminLoggedIn||typeof google==='undefined'||!google.script||!google.script.run)return;
+      google.script.run.withSuccessHandler(renderSponsorAdmin).withFailureHandler(function(err){console.error('Gagal memuat sponsor:',err);}).getAllSponsors();
+    }
+    function renderSponsorAdmin(res){
+      var body=document.getElementById('sponsorAdminBody'); if(!body)return;
+      if(!res||!res.success||!res.sponsors||!res.sponsors.length){body.innerHTML='<tr><td colspan="4" class="text-center text-muted">Belum ada data sponsor.</td></tr>';return;}
+      var html='';
+      res.sponsors.forEach(function(s){
+        html+='<tr><td><strong>'+escapeSponsorHtml(s.sponsorName)+'</strong><br><span class="text-muted">'+escapeSponsorHtml(s.title)+'</span></td><td>'+escapeSponsorHtml(s.startDate)+' s/d '+escapeSponsorHtml(s.endDate)+'</td><td><span class="badge '+(String(s.status).toLowerCase()==='aktif'?'bg-success':'bg-secondary')+'">'+escapeSponsorHtml(s.status)+'</span></td><td class="text-center text-nowrap"><button class="btn btn-outline-primary btn-sm py-0 px-1 me-1 sponsor-edit-btn" data-id="'+escapeSponsorHtml(s.id)+'"><i class="fas fa-edit"></i></button><button class="btn btn-outline-danger btn-sm py-0 px-1 sponsor-delete-btn" data-id="'+escapeSponsorHtml(s.id)+'"><i class="fas fa-trash"></i></button></td></tr>';
+      });
+      body.innerHTML=html;
+      body.querySelectorAll('.sponsor-edit-btn').forEach(function(btn){btn.addEventListener('click',function(){var id=btn.getAttribute('data-id');var found=res.sponsors.find(function(x){return String(x.id)===String(id);});if(found)editSponsor(found);});});
+      body.querySelectorAll('.sponsor-delete-btn').forEach(function(btn){btn.addEventListener('click',function(){deleteSponsorAdmin(btn.getAttribute('data-id'));});});
+    }
+    function resetSponsorForm(){
+      var form=document.getElementById('sponsorForm'); if(form)form.reset();
+      var id=document.getElementById('sponsorId'); if(id)id.value='';
+      var status=document.getElementById('sponsorStatus'); if(status)status.value='Aktif';
+      var text=document.getElementById('sponsorSubmitText'); if(text)text.innerText='Simpan Sponsor';
+      var today=new Date(), start=today.getFullYear()+'-'+String(today.getMonth()+1).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0');
+      var startEl=document.getElementById('sponsorStart'), endEl=document.getElementById('sponsorEnd'); if(startEl)startEl.value=start;if(endEl)endEl.value=start;
+    }
+    function editSponsor(s){
+      document.getElementById('sponsorId').value=s.id||'';document.getElementById('sponsorName').value=s.sponsorName||'';document.getElementById('sponsorTitle').value=s.title||'';document.getElementById('sponsorDescription').value=s.description||'';document.getElementById('sponsorBanner').value=s.bannerUrl||'';document.getElementById('sponsorLink').value=s.link||'';document.getElementById('sponsorStart').value=s.startDate||'';document.getElementById('sponsorEnd').value=s.endDate||'';document.getElementById('sponsorStatus').value=s.status||'Aktif';document.getElementById('sponsorSubmitText').innerText='Perbarui Sponsor';document.getElementById('sponsorForm').scrollIntoView({behavior:'smooth',block:'center'});
+    }
+    function handleSponsorSubmit(e){
+      e.preventDefault(); if(!isAdminLoggedIn)return alert('Silakan login sebagai admin terlebih dahulu.');
+      var data={id:document.getElementById('sponsorId').value,sponsorName:document.getElementById('sponsorName').value,title:document.getElementById('sponsorTitle').value,description:document.getElementById('sponsorDescription').value,bannerUrl:document.getElementById('sponsorBanner').value,link:document.getElementById('sponsorLink').value,startDate:document.getElementById('sponsorStart').value,endDate:document.getElementById('sponsorEnd').value,status:document.getElementById('sponsorStatus').value};
+      if(data.endDate<data.startDate)return alert('Tanggal berakhir tidak boleh sebelum tanggal mulai.');
+      var method=data.id?'updateSponsor':'addSponsor';
+      google.script.run.withSuccessHandler(function(res){alert(res.message);if(res.success){resetSponsorForm();loadSponsorAdmin();loadDashboardData();}}).withFailureHandler(function(err){alert('Gagal menyimpan sponsor: '+(err&&err.message?err.message:err));})[method](data);
+    }
+    function deleteSponsorAdmin(id){
+      if(!confirm('Hapus sponsor ini?'))return;
+      google.script.run.withSuccessHandler(function(res){alert(res.message);if(res.success){loadSponsorAdmin();loadDashboardData();}}).withFailureHandler(function(err){alert('Gagal menghapus sponsor: '+(err&&err.message?err.message:err));}).deleteSponsor(id);
+    }
+
+    function openLoginModal() {
+      var myModal = new bootstrap.Modal(document.getElementById('loginModal'));
+      myModal.show();
+    }
+
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      var u = document.getElementById("loginUser").value;
+      var p = document.getElementById("loginPass").value;
+      
+      if (typeof google !== "undefined" && google.script && google.script.run) {
+        google.script.run.withSuccessHandler(function(res) {
+          if(res.success) {
+            isAdminLoggedIn = true;
+            document.getElementById("adminPanel").style.display = "block";
+            document.getElementById("thAction").style.display = "table-cell";
+            var modalEl = document.getElementById('loginModal');
+            var modal = bootstrap.Modal.getInstance(modalEl);
+            if(modal) modal.hide();
+            alert("Login Berhasil! Selamat datang Admin.");
+            resetSponsorForm();
+            loadSponsorAdmin();
+            loadDashboardData();
+          } else {
+            alert(res.message);
+          }
+        }).processLogin(u, p);
+      }
+    }
+
+    function logoutAdmin() {
+      isAdminLoggedIn = false;
+      document.getElementById("adminPanel").style.display = "none";
+      document.getElementById("thAction").style.display = "none";
+      resetSponsorForm();
+      loadDashboardData();
+    }
+
+    function handleTxSubmit(e) {
+      e.preventDefault();
+      var data = {
+        date: document.getElementById("txDate").value,
+        type: document.getElementById("txType").value,
+        category: document.getElementById("txCategory").value,
+        amount: document.getElementById("txAmount").value,
+        description: document.getElementById("txDesc").value
+      };
+      
+      if (typeof google !== "undefined" && google.script && google.script.run) {
+        google.script.run.withSuccessHandler(function(res) {
+          alert(res.message);
+          if(res.success) {
+            document.getElementById("addTxForm").reset();
+            document.getElementById("txDate").valueAsDate = new Date();
+            loadDashboardData();
+          }
+        }).addTransaction(data);
+      }
+    }
+
+    function deleteTx(id) {
+      if(confirm("Apakah Anda yakin ingin menghapus transaksi ini?")) {
+        if (typeof google !== "undefined" && google.script && google.script.run) {
+          google.script.run.withSuccessHandler(function(res) {
+            alert(res.message);
+            if(res.success) loadDashboardData();
+          }).deleteTransaction(id);
+        }
+      }
+    }
+
+    function handleInfoSubmit(e) {
+      e.preventDefault();
+      var title = document.getElementById("infoTitle").value;
+      var content = document.getElementById("infoContent").value;
+      
+      if (typeof google !== "undefined" && google.script && google.script.run) {
+        google.script.run.withSuccessHandler(function(res) {
+          alert(res.message);
+          if(res.success) {
+            document.getElementById("addInfoForm").reset();
+            loadDashboardData();
+          }
+        }).addInformation(title, content);
+      }
+    }
+
+    function deleteInfo(id) {
+      if(confirm("Apakah Anda yakin ingin menghapus informasi ini?")) {
+        if (typeof google !== "undefined" && google.script && google.script.run) {
+          google.script.run.withSuccessHandler(function(res) {
+            alert(res.message);
+            if(res.success) loadDashboardData();
+          }).deleteInformation(id);
+        }
+      }
+    }
+
+    function saveRunningText() {
+      var txt = document.getElementById("newRunningText").value;
+      if(!txt) return alert("Teks tidak boleh kosong!");
+      
+      if (typeof google !== "undefined" && google.script && google.script.run) {
+        google.script.run.withSuccessHandler(function(res) {
+          alert(res.message);
+          if(res.success) loadDashboardData();
+        }).updateRunningText(txt);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      try { startClockAndDate(); } catch (e) { console.error("Gagal menjalankan jam/tanggal:", e); }
+      try { resetSponsorForm(); } catch (e) { console.error("Gagal menyiapkan form sponsor:", e); }
+      try { loadDashboardData(); } catch (e) { console.error("Gagal memuat dashboard:", e); }
+      try { startYouTubeAutoRefresh(); } catch (e) { console.error("Gagal memulai Live Streaming YouTube:", e); }
+    });
+  </script>
+</body>
+</html>
